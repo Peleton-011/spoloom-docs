@@ -32,71 +32,241 @@ Conversion notes:
 	</head>
 
 	<body>
+		<header
+			style="
+				position: fixed;
+				top: 0;
+				padding: 2rem;
+				background-color: var(--pico-background-color);
+				width: 100%;
+			"
+		>
+			<nav>
+				<ul>
+					<li>
+						<h1>Development Report: Spoloom Drums</h1>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a
+							href="index.html"
+							role="button"
+							style="align-self: flex-end"
+						>
+							Back</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+			<br /><br /><br /><br />
 
-        <h1 id="technologies-report-on-shopify-services">Technologies report on Shopify services</h1>
-        <h2 id="-shopify-liquid-building-dynamic-themes-"><strong>Shopify Liquid: Building Dynamic Themes</strong></h2>
-        <p>Shopify Liquid is a template language that acts as the bridge between your theme files (HTML, CSS, etc.) and the data from your Shopify store. It allows you to dynamically insert content and control how your store&#39;s pages are displayed.</p>
-        <p>Here&#39;s a breakdown of the basics:</p>
-        <ul>
-        <li><strong>Objects and Variables:</strong> Liquid uses objects and variables to store and access data from your store. Think of them as containers holding information like product names, prices, or customer details. You access them within your theme files using double curly braces <code>{{ object.property }}</code>.</li>
-        <li><strong>Tags:</strong> These are special keywords within Liquid that control the flow and logic of your theme. There are tags for looping through product lists, displaying conditional content, and more. For example, the <code>{% for product in products %}{% endfor %}</code> tag loops through each product in a product list.</li>
-        <li><strong>Filters:</strong> These are tools you can use to modify the output of objects and variables. For example, you can use the <code>| uppercase</code> filter to display text in all caps.</li>
-        </ul>
-        <p><strong>Connecting Liquid to your Store:</strong></p>
-        <p>Liquid doesn&#39;t directly connect to your store. Instead, it works within the theme files you upload to Shopify. These theme files are then processed by Shopify, which populates the Liquid objects and variables with data from your store&#39;s database.</p>
-        <p>Here&#39;s a simplified view:</p>
-        <ol>
-        <li>You create theme files containing HTML, CSS, and Liquid code.</li>
-        <li>You upload these files to Shopify.</li>
-        <li>When a customer visits your store, Shopify retrieves the theme files.</li>
-        <li>Shopify processes the Liquid code, populating objects and variables with data from your store.</li>
-        <li>The final HTML is generated and displayed to the customer.</li>
-        </ol>
-        <p><strong>Benefits of using Liquid:</strong></p>
-        <ul>
-        <li><strong>Dynamic Content:</strong> You can easily display product details, collections, customer information, and more, making your store content dynamic and relevant to each visitor.</li>
-        <li><strong>Customization:</strong> Liquid allows you to create unique layouts and control how content is displayed, offering more customization than pre-built themes.</li>
-        <li><strong>Theme Development:</strong> For coders, Liquid is the foundation for building custom themes that cater to specific needs.</li>
-        </ul>
-        <p><strong>Learning Resources:</strong></p>
-        <ul>
-        <li>Shopify Liquid Documentation:<a href="https://m.youtube.com/watch?v=6jCmSk9139c"> https://m.youtube.com/watch?v=6jCmSk9139c</a></li>
-        <li>Introduction to Liquid:<a href="https://github.com/Shopify/liquid/wiki"> https://github.com/Shopify/liquid/wiki</a></li>
-        </ul>
-        <p>By understanding the basics of Liquid, you can create themes that are both visually appealing and dynamically driven by the rich data within your Shopify store.</p>
-        <h2 id="-hydrogen-headless-commerce-"><strong>Hydrogen: Headless Commerce</strong></h2>
-        <p>Shopify Hydrogen is all about building custom storefronts with a headless commerce approach. Here&#39;s a breakdown of the basics and how it connects to your Shopify store:</p>
-        <p>Imagine your Shopify store as two parts:</p>
-        <ol>
-        <li><strong>Frontend:</strong> This is the customer-facing part, where people browse products, add them to carts, and checkout.</li>
-        <li><strong>Backend:</strong> This handles the data side of things, like product information, inventory, and order processing.</li>
-        </ol>
-        <p>Traditionally, Shopify themes combine these two parts. But with headless commerce, Hydrogen lets you separate them.</p>
-        <p><strong>Building with Hydrogen:</strong></p>
-        <ul>
-        <li><strong>React-based:</strong> Hydrogen uses React, a popular JavaScript library, for building the frontend. This allows for a flexible and component-based approach to building your store&#39;s user interface.</li>
-        <li><strong>Pre-configured with Shopify:</strong> Hydrogen comes pre-configured with tools and features specifically designed to work with Shopify&#39;s API. It handles things like authentication and fetching data from your store.</li>
-        <li><strong>Components:</strong> Hydrogen provides pre-built components for common storefront elements like product listings, carts, and checkout. These components are already connected to the Shopify API, making it easier to build your store.</li>
-        </ul>
-        <p><strong>Connecting to Your Store:</strong></p>
-        <ul>
-        <li><strong>API Client:</strong> Hydrogen handles the API connection for you. It retrieves data from your Shopify store using the Admin API and presents it within your React components.</li>
-        <li><strong>Development Store:</strong> You don&#39;t connect Hydrogen directly to a live store. Instead, you use a development store, a free version of your store specifically for testing and development purposes.</li>
-        <li><strong>Deployment:</strong> Once your Hydrogen storefront is built, you deploy it to a separate hosting platform like Vercel or Netlify. This keeps your custom storefront separate from your Shopify admin.</li>
-        </ul>
-        <p><strong>Benefits of Hydrogen:</strong></p>
-        <ul>
-        <li><strong>Flexibility:</strong> You have complete control over the design and functionality of your storefront.</li>
-        <li><strong>Performance:</strong> React can potentially lead to faster and more responsive storefronts.</li>
-        <li><strong>Scalability:</strong> Easier to scale your storefront for future growth.</li>
-        </ul>
-        <p><strong>Things to Consider:</strong></p>
-        <ul>
-        <li><strong>Learning Curve:</strong> Requires knowledge of React and JavaScript for development.</li>
-        <li><strong>Deployment:</strong> You&#39;ll need to manage deployment to a separate hosting platform.</li>
-        </ul>
-        <p>Overall, Shopify Hydrogen allows coders to build unique and high-performance storefronts with a lot of creative freedom. It&#39;s a powerful tool, but requires some additional development expertise compared to traditional Shopify themes.</p>
-        <p><!-- watermark --><div style="background-color:#FFFFFF"><p style="color:#FFFFFF; font-size: 1px">gd2md-html: xyzzy Fri Jul 19 2024</p></div></p>
-        
+		<main class="container">
+			<h1 id="technologies-report-on-shopify-services">
+				Technologies report on Shopify services
+			</h1>
+			<h2 id="-shopify-liquid-building-dynamic-themes-">
+				<strong>Shopify Liquid: Building Dynamic Themes</strong>
+			</h2>
+			<p>
+				Shopify Liquid is a template language that acts as the bridge
+				between your theme files (HTML, CSS, etc.) and the data from
+				your Shopify store. It allows you to dynamically insert content
+				and control how your store&#39;s pages are displayed.
+			</p>
+			<p>Here&#39;s a breakdown of the basics:</p>
+			<ul>
+				<li>
+					<strong>Objects and Variables:</strong> Liquid uses objects
+					and variables to store and access data from your store.
+					Think of them as containers holding information like product
+					names, prices, or customer details. You access them within
+					your theme files using double curly braces
+					<code>{{ object.property }}</code>.
+				</li>
+				<li>
+					<strong>Tags:</strong> These are special keywords within
+					Liquid that control the flow and logic of your theme. There
+					are tags for looping through product lists, displaying
+					conditional content, and more. For example, the
+					<code>{% for product in products %}{% endfor %}</code> tag
+					loops through each product in a product list.
+				</li>
+				<li>
+					<strong>Filters:</strong> These are tools you can use to
+					modify the output of objects and variables. For example, you
+					can use the <code>| uppercase</code> filter to display text
+					in all caps.
+				</li>
+			</ul>
+			<p><strong>Connecting Liquid to your Store:</strong></p>
+			<p>
+				Liquid doesn&#39;t directly connect to your store. Instead, it
+				works within the theme files you upload to Shopify. These theme
+				files are then processed by Shopify, which populates the Liquid
+				objects and variables with data from your store&#39;s database.
+			</p>
+			<p>Here&#39;s a simplified view:</p>
+			<ol>
+				<li>
+					You create theme files containing HTML, CSS, and Liquid
+					code.
+				</li>
+				<li>You upload these files to Shopify.</li>
+				<li>
+					When a customer visits your store, Shopify retrieves the
+					theme files.
+				</li>
+				<li>
+					Shopify processes the Liquid code, populating objects and
+					variables with data from your store.
+				</li>
+				<li>
+					The final HTML is generated and displayed to the customer.
+				</li>
+			</ol>
+			<p><strong>Benefits of using Liquid:</strong></p>
+			<ul>
+				<li>
+					<strong>Dynamic Content:</strong> You can easily display
+					product details, collections, customer information, and
+					more, making your store content dynamic and relevant to each
+					visitor.
+				</li>
+				<li>
+					<strong>Customization:</strong> Liquid allows you to create
+					unique layouts and control how content is displayed,
+					offering more customization than pre-built themes.
+				</li>
+				<li>
+					<strong>Theme Development:</strong> For coders, Liquid is
+					the foundation for building custom themes that cater to
+					specific needs.
+				</li>
+			</ul>
+			<p><strong>Learning Resources:</strong></p>
+			<ul>
+				<li>
+					Shopify Liquid Documentation:<a
+						href="https://m.youtube.com/watch?v=6jCmSk9139c"
+					>
+						https://m.youtube.com/watch?v=6jCmSk9139c</a
+					>
+				</li>
+				<li>
+					Introduction to Liquid:<a
+						href="https://github.com/Shopify/liquid/wiki"
+					>
+						https://github.com/Shopify/liquid/wiki</a
+					>
+				</li>
+			</ul>
+			<p>
+				By understanding the basics of Liquid, you can create themes
+				that are both visually appealing and dynamically driven by the
+				rich data within your Shopify store.
+			</p>
+			<h2 id="-hydrogen-headless-commerce-">
+				<strong>Hydrogen: Headless Commerce</strong>
+			</h2>
+			<p>
+				Shopify Hydrogen is all about building custom storefronts with a
+				headless commerce approach. Here&#39;s a breakdown of the basics
+				and how it connects to your Shopify store:
+			</p>
+			<p>Imagine your Shopify store as two parts:</p>
+			<ol>
+				<li>
+					<strong>Frontend:</strong> This is the customer-facing part,
+					where people browse products, add them to carts, and
+					checkout.
+				</li>
+				<li>
+					<strong>Backend:</strong> This handles the data side of
+					things, like product information, inventory, and order
+					processing.
+				</li>
+			</ol>
+			<p>
+				Traditionally, Shopify themes combine these two parts. But with
+				headless commerce, Hydrogen lets you separate them.
+			</p>
+			<p><strong>Building with Hydrogen:</strong></p>
+			<ul>
+				<li>
+					<strong>React-based:</strong> Hydrogen uses React, a popular
+					JavaScript library, for building the frontend. This allows
+					for a flexible and component-based approach to building your
+					store&#39;s user interface.
+				</li>
+				<li>
+					<strong>Pre-configured with Shopify:</strong> Hydrogen comes
+					pre-configured with tools and features specifically designed
+					to work with Shopify&#39;s API. It handles things like
+					authentication and fetching data from your store.
+				</li>
+				<li>
+					<strong>Components:</strong> Hydrogen provides pre-built
+					components for common storefront elements like product
+					listings, carts, and checkout. These components are already
+					connected to the Shopify API, making it easier to build your
+					store.
+				</li>
+			</ul>
+			<p><strong>Connecting to Your Store:</strong></p>
+			<ul>
+				<li>
+					<strong>API Client:</strong> Hydrogen handles the API
+					connection for you. It retrieves data from your Shopify
+					store using the Admin API and presents it within your React
+					components.
+				</li>
+				<li>
+					<strong>Development Store:</strong> You don&#39;t connect
+					Hydrogen directly to a live store. Instead, you use a
+					development store, a free version of your store specifically
+					for testing and development purposes.
+				</li>
+				<li>
+					<strong>Deployment:</strong> Once your Hydrogen storefront
+					is built, you deploy it to a separate hosting platform like
+					Vercel or Netlify. This keeps your custom storefront
+					separate from your Shopify admin.
+				</li>
+			</ul>
+			<p><strong>Benefits of Hydrogen:</strong></p>
+			<ul>
+				<li>
+					<strong>Flexibility:</strong> You have complete control over
+					the design and functionality of your storefront.
+				</li>
+				<li>
+					<strong>Performance:</strong> React can potentially lead to
+					faster and more responsive storefronts.
+				</li>
+				<li>
+					<strong>Scalability:</strong> Easier to scale your
+					storefront for future growth.
+				</li>
+			</ul>
+			<p><strong>Things to Consider:</strong></p>
+			<ul>
+				<li>
+					<strong>Learning Curve:</strong> Requires knowledge of React
+					and JavaScript for development.
+				</li>
+				<li>
+					<strong>Deployment:</strong> You&#39;ll need to manage
+					deployment to a separate hosting platform.
+				</li>
+			</ul>
+			<p>
+				Overall, Shopify Hydrogen allows coders to build unique and
+				high-performance storefronts with a lot of creative freedom.
+				It&#39;s a powerful tool, but requires some additional
+				development expertise compared to traditional Shopify themes.
+			</p>
+		</main>
 	</body>
 </html>
